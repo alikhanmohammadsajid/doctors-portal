@@ -13,3 +13,6 @@
     opacity: .9;
     z-index: -1;
 }
+input{
+    margin-bottom: 15px;
+}

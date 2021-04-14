@@ -1,6 +1,5 @@
 
 import './App.css';
-import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,16 +7,38 @@ import {
   Link
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
+import Appointment from './Components/Appointment/Appointment/Appointment';
+import Login from './Components/Login/Login/Login';
+import { createContext, useState } from 'react';
+import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
+import AllPatients from './Components/AllPatients/AllPatients/AllPatients';
+
+export const UserContext = createContext()
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState()
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-<Home></Home>
-        </Route>
-      </Switch>
-    </Router>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/appointment">
+            <Appointment></Appointment>
+          </Route>
+          <Route path="/dashboard/appointment">
+            <Dashboard></Dashboard>
+          </Route>
+          <Route path="/dashboard/allPatients">
+            <AllPatients></AllPatients>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 

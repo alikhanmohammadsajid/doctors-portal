@@ -1,4 +1,8 @@
+.appointment-container{
+margin-top: 15%;
+}
 .make-appointment{
+    
     background-image: url(../../../images/appointmentbg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,7 +18,7 @@
     height: 100%;
     position: absolute;
     background: rgb(36, 41, 73);
-    opacity: .8;
+    opacity: .5;
     top: 0;
 }
 .make-appointment img{

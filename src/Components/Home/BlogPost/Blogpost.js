@@ -1,18 +1,18 @@
 import React from 'react';
-
+import './BlogPost.css'
 const BlogPost = (props) => {
     const {title, description, author, authorImg , date} = props.blog;
     return (
-        <div className="card shadow-sm">
-            <div className="card-header d-flex  align-items-center">
+        <div className="card blog-card shadow-lg p-3 mb-5 bg-body rounded col-md-4 me-3">
+            <div className="card-header d-flex  align-items-center justify-content-center">
                 <img className="mx-3" src={authorImg} alt="" width="60"/>
                 <div>
-                    <h6 className="text-primary">{author}</h6>
-                    <p className="m-0">{date}</p>
+                    <h6>{author}</h6>
+                    <p>{date}</p>
                 </div>
             </div>
             <div className="card-body">
-                <h5>{title}</h5>
+                <h5 className="text-center">{title}</h5>
                 <p className="card-text text-secondary mt-4">{description}</p>
             </div>
             

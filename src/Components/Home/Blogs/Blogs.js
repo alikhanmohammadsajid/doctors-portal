@@ -37,7 +37,7 @@ const Blogs = () => {
                     <h5 className="text-primary text-uppercase">our blog</h5>
                     <h1>From Our Blog News</h1>
                </div>
-               <div className="card-deck mt-5">
+               <div className="row justify-content-center card-deck mt-5">
                     {
                         blogData.map(blog => <BlogPost blog={blog} key={blog.title}/>)
                     }

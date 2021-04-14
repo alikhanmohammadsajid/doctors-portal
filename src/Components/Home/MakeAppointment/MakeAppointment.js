@@ -5,7 +5,7 @@ const MakeAppointment = () => {
     return (
         <section className="make-appointment">
             <div className="container">
-                <div className="row">
+                <div className="row appointment-container">
                     <div className="col-md-5 d-none d-md-block">
                         <img src={doctor} alt="" />
                     </div>
